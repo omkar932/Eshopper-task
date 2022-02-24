@@ -1,0 +1,37 @@
+<div class="container">
+  <form class="col-xl-6"[formGroup]="loginForm" (ngSubmit)="loginFormSubmit()">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp" formControlName = "email"
+      />
+      <div *ngIf = "loginForm.controls['email'].touched && !loginForm.controls['email'].valid">
+        <span *ngIf = "loginForm.controls['email'].hasError('required')">
+            Email id required
+        </span>
+        <span *ngIf = "loginForm.controls['email'].hasError('email')">
+            Email id Invalid
+        </span>
+    </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" formControlName = "password"/>
+      <div *ngIf="loginForm.controls['password'].touched && !loginForm.controls['password'].valid">
+        <span *ngIf = "loginForm.controls['password'].hasError('required')">
+            Password id required
+        </span>
+        <span *ngIf = "loginForm.controls['password'].hasError('minlength')">
+            Pass: Min Length is 4.
+        </span>
+        <span *ngIf = "loginForm.controls['password'].hasError('maxlength')">
+            Pass: Max Length is 8.
+        </span>
+    </div>
+    </div>
+    <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary">Submit</button>
+  </form>
+</div>

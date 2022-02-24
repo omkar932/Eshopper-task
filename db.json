@@ -1,0 +1,102 @@
+{
+  "users": [
+    {
+      "name": "omkar",
+      "mobile": "9999999999",
+      "email": "omkar932patil@gmail.com",
+      "password": "ooooo",
+      "id": 1,
+      "usertype": 2
+    },
+    {
+      "name": "omkar1",
+      "mobile": "9999999999",
+      "email": "omkar932@gmail.com",
+      "password": "ooooo",
+      "date": "2022-02-17",
+      "id": 2,
+      "usertype": 1
+    },
+    {
+      "name": "Kshitij",
+      "mobile": "9999999999",
+      "email": "kshitij@gmail.com",
+      "password": "1111",
+      "date": "2022-02-01",
+      "id": 3,
+      "usertype": 1
+    },
+    {
+      "name": "Kunal",
+      "mobile": "8888888888",
+      "email": "kunal@gmail.com",
+      "password": "aaaaa",
+      "ageControl": 18,
+      "id": 4,
+      "usertype": 1
+    },
+    {
+      "name": "Omkar44",
+      "mobile": "9999999999",
+      "email": "omkar1234@gmail.com",
+      "password": "11111",
+      "age": 21,
+      "id": 5,
+      "usertype": 1
+    },
+    {
+      "name": "omkar123",
+      "mobile": "1234567899",
+      "email": "omkarpatil@gmail.com",
+      "password": "ooooo",
+      "age": 21,
+      "id": 6
+    },
+    {
+      "name": "omka",
+      "mobile": "9999999999",
+      "email": "omkar932pa@gmail.com",
+      "password": "ooooo",
+      "age": 34,
+      "id": 7
+    },
+    {
+      "name": "uuuuu",
+      "mobile": "9999999999",
+      "email": "iiiii@gmail.com",
+      "password": "iiiii",
+      "age": 24,
+      "id": 8
+    }
+  ],
+  "products": [
+    {
+      "name": "a",
+      "price": "a",
+      "discount": "",
+      "id": 1
+    },
+    {
+      "name": "Bag",
+      "price": "2000",
+      "discount": "20",
+      "category": "",
+      "brand": "",
+      "id": 2
+    },
+    {
+      "name": "omkar",
+      "price": "omkar",
+      "discount": "omkar",
+      "category": "",
+      "brand": "",
+      "id": 3
+    },
+    {
+      "name": "a",
+      "price": "a",
+      "discount": "a",
+      "id": 4
+    }
+  ]
+}

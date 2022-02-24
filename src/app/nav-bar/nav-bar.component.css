@@ -1,0 +1,9 @@
+*{
+    background-color: rgb(138, 138, 243);
+    height: auto;
+    color: #fff !important;
+    padding: 5px;
+}
+.logo{
+    font-weight: bold;
+}

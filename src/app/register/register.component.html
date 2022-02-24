@@ -1,0 +1,96 @@
+<div class="container">
+    <form class="col-xl-6" [formGroup]="register" (ngSubmit)="registersubmit()">
+        <h2 class="text-centers">Register Form</h2>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Name</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" formControlName="name" aria-describedby="emailHelp"/>
+        <div *ngIf="register.controls['name'].touched && !register.controls['name'].valid">
+            <span *ngIf = "register.controls['name'].hasError('required')">
+                Name is required
+            </span>
+            <span *ngIf = "register.controls['name'].hasError('minlength')">
+                Name: Min Length is 2.
+            </span>
+            <span *ngIf = "register.controls['name'].hasError('maxlength')">
+                Name: Max Length is 15.
+            </span>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Mobile Number</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" formControlName="mobile" aria-describedby="emailHelp" />
+        <div *ngIf = "register.controls['mobile'].touched && !register.controls['mobile'].valid">
+            <span *ngIf = "register.controls['mobile'].hasError('required')">
+                Mobile Number is required
+            </span>
+
+            <span *ngIf = "register.controls['mobile'].hasError('minlength')">1
+                Mobile Number is Invalid
+            </span>
+            
+            <span *ngIf = "register.controls['mobile'].hasError('maxlength')">
+                Mobile Number is Invalid
+            </span>
+            {{errmsg}}
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email" aria-describedby="emailHelp"/>
+        <div *ngIf = "register.controls['email'].touched && !register.controls['email'].valid">
+            <span *ngIf = "register.controls['email'].hasError('required')">
+                Email id required
+            </span>
+            <span *ngIf = "register.controls['email'].hasError('email')">
+                Email id Invalid
+            </span>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password"/>
+        <div *ngIf="register.controls['password'].touched && !register.controls['password'].valid">
+            <span *ngIf = "register.controls['password'].hasError('required')">
+                Password id required
+            </span>
+            <span *ngIf = "register.controls['password'].hasError('minlength')">
+                Pass: Min Length is 4.
+            </span>
+            <span *ngIf = "register.controls['password'].hasError('maxlength')">
+                Pass: Max Length is 8.
+            </span>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password" formControlName="cpassword"/>
+        <div *ngIf="register.controls['cpassword'].touched && !register.controls['cpassword'].valid">
+            <span *ngIf = "register.controls['cpassword'].hasError('required')">
+                Confirm Password id required
+            </span>
+            <span *ngIf = "register.controls['cpassword'].hasError('minlength')">
+                Confirm Pass: Min Length is 4.
+            </span>
+            <span *ngIf = "register.controls['cpassword'].hasError('maxlength')">
+                Confirm Pass: Max Length is 8.
+            </span>
+            <span *ngIf = "register.controls['cpassword'].hasError('xyz')">
+                Confirm Password is not same as Password
+            </span>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Enter Your Age :</label><br>
+        <input type="number" required placeholder="Age"  name="age" min="18" formControlName="age">   
+      </div>
+      
+      <div *ngIf="register.controls['age'].hasError('min')">
+          Minimum age 18 required.
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="!register.valid">Submit</button>
+      <h2>If Existing User:- <span><button class="btn btn-primary" routerLink="/login">Login</button></span></h2>
+    </form>
+  </div>
+  {{register.status}}
+  <!-- {{register.valid}} -->
+  {{errmsg}}
